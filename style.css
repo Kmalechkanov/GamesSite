@@ -1,0 +1,237 @@
+html,
+body {
+    font-family: 'Frank Ruhl Libre', serif;
+    background-image: url("./images/background.png");
+    background-size: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.header {
+    margin: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    background-color: rgb(103, 222, 249, 0.7);
+    background-size: 100%;
+    z-index: 10;
+}
+
+.header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 25px;
+    line-height: 30px;
+    border-radius: 8px;
+}
+
+.notification {
+    padding: 20px;
+    color: white;
+    display: none;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.header a.active {
+    background-color: rgba(106, 207, 47, 0.541);
+    color: white;
+}
+
+.header-right a {
+    float: right;
+}
+
+.header a:hover {
+    background-color: rgba(175, 175, 175, 0.432);
+}
+
+#bodyDiv {
+    margin-top: 60px;
+    background-color: rgba(255, 255, 255, 0.89);
+    background-size: 100%;
+    border-radius: 10px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(103, 222, 249, 0.7);
+    color: white;
+    text-align: center;
+}
+
+.formDiv {
+    margin-top: 60px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    background-color: white;
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 15px;
+    border-radius: 4px;
+    margin-bottom: 160px;
+}
+
+input[type=submit] {
+    background-color: rgba(202, 200, 200, 0.226);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px 5px;
+    width: 100%;
+}
+
+input[type=submit]:hover {
+    background-color: rgba(87, 230, 122, 0.295);
+}
+
+label {
+    width: 33%;
+}
+
+input[type=text],
+input[type=password] {
+    width: 60%;
+    border: none;
+    background-color: rgba(202, 200, 200, 0.226);
+    border-radius: 4px;
+    padding: 10px 5px;
+    margin-bottom: 10px;
+}
+
+#registerForm input,
+#loginForm input {
+    float: right;
+}
+
+#registerForm label,
+#loginForm label {
+    text-align: left;
+    float: left;
+    padding: 12px 5px;
+}
+
+form {
+    display: table;
+    width: 100%;
+}
+
+.newLineA {
+    padding-top: 25px;
+    padding-bottom: 20px;
+}
+
+.newLineA div {
+    font-size: 20px;
+    display: flex;
+    padding-left: 20px;
+}
+
+.newLineA a:hover {
+    font-size: 20px;
+    display: flex;
+    padding-left: 20px;
+    padding-right: 10px;
+    background-color: rgba(87, 230, 122, 0.295);
+    border-bottom-right-radius: 10px;
+}
+
+.newLineA img {
+    width: 25px;
+    border-radius: 3px;
+}
+
+.gamesDiv {
+    font-size: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gamesDiv div {
+    font-size: 20px;
+    display: inline-grid;
+    background-color: white;
+    border-radius: 7px;
+    padding: 5px;
+    padding-bottom: 25px;
+    margin-left: 10px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+.gamesDiv img {
+    width: 160px;
+    height: 160px;
+    border-radius: 3px;
+}
+
+.gamesDiv a {
+    margin-top: 15px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 0px;
+}
+
+.gamesDiv div:hover {
+    text-align: center;
+    background-color: rgb(238, 238, 238);
+}
+
+.gamesDiv a:hover {
+    text-align: center;
+    background-color: rgba(87, 230, 122, 0.295);
+}
+
+.underHeader {
+    margin-top: 80px;
+}
+
+@media screen and (max-width: 500px) {
+    .header {
+        position: relative;
+    }
+    .header a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .header-right {
+        float: none;
+    }
+    .formDiv {
+        width: 90%;
+        background-color: white;
+    }
+    label {
+        width: 30%;
+    }
+    .gamesDiv {
+        display: block;
+    }
+}
