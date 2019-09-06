@@ -1,1 +1,1 @@
-heroku local web
+web: http-server
