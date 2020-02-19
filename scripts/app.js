@@ -18,7 +18,10 @@ const app = Sammy('body', function() {
     
     this.get('#/games', gamesController.getGames);
     this.get('#/games/snake', gamesController.getSnake);
-
+    this.get('#/games/tictactoe', gamesController.getTicTacToe);
+    this.get('#/games/spaceinvaders', gamesController.getSpaceInvaders);
+    this.get('#/games/flappybird', gamesController.getFlappyBird);
+    this.get('#/games/sudoku', gamesController.getSudoku);
 });
 
 app.run('#/');

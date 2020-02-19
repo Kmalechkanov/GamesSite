@@ -43,13 +43,64 @@ const gamesController = function() {
 
         helper.loadPartialsTo(context)
             .then(function() {
-                this.partial('../../views/contact.hbs')
+                this.partial('../../views/games/tictactoe.hbs')
+            });
+    };
+
+    const getSpaceInvaders = async function(context) {
+        const loggedIn = helper.addHeaderInfo(context);
+
+        let extended = {};
+        context.loggedIn = loggedIn;
+
+        if (loggedIn) {
+            context.username = sessionStorage.username;
+        }
+
+        helper.loadPartialsTo(context)
+            .then(function() {
+                this.partial('../../views/games/spaceinvaders.hbs')
+            });
+    };
+
+    const getFlappyBird = async function(context) {
+        const loggedIn = helper.addHeaderInfo(context);
+
+        let extended = {};
+        context.loggedIn = loggedIn;
+
+        if (loggedIn) {
+            context.username = sessionStorage.username;
+        }
+
+        helper.loadPartialsTo(context)
+            .then(function() {
+                this.partial('../../views/games/notimplemented.hbs')
+            });
+    };
+
+    const getSudoku = async function(context) {
+        const loggedIn = helper.addHeaderInfo(context);
+
+        let extended = {};
+        context.loggedIn = loggedIn;
+
+        if (loggedIn) {
+            context.username = sessionStorage.username;
+        }
+
+        helper.loadPartialsTo(context)
+            .then(function() {
+                this.partial('../../views/games/notimplemented.hbs')
             });
     };
 
     return {
         getGames,
         getSnake,
-        getTicTacToe
+        getTicTacToe,
+        getSpaceInvaders,
+        getFlappyBird,
+        getSudoku
     }
 }();
