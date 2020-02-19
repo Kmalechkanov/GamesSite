@@ -1,5 +1,5 @@
-const homeController = function() {
-    const getHome = async function(context) {
+const gamesController = function() {
+    const getGames = async function(context) {
         const loggedIn = helper.addHeaderInfo(context);
 
         let extended = {};
@@ -11,11 +11,27 @@ const homeController = function() {
 
         helper.loadPartialsTo(context)
             .then(function() {
-                this.partial('../../views/home/home.hbs')
+                this.partial('../../views/games/games.hbs');
             });
     };
 
-    const getContact = async function(context) {
+    const getSnake = async function(context) {
+        const loggedIn = helper.addHeaderInfo(context);
+
+        let extended = {};
+        context.loggedIn = loggedIn;
+
+        if (loggedIn) {
+            context.username = sessionStorage.username;
+        }
+
+        helper.loadPartialsTo(context)
+            .then(function() {
+                this.partial('../../views/games/snake.hbs')
+            });
+    };
+
+    const getTicTacToe = async function(context) {
         const loggedIn = helper.addHeaderInfo(context);
 
         let extended = {};
@@ -32,7 +48,8 @@ const homeController = function() {
     };
 
     return {
-        getHome,
-        getContact
+        getGames,
+        getSnake,
+        getTicTacToe
     }
 }();

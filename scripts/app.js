@@ -15,8 +15,9 @@ const app = Sammy('body', function() {
     this.get('#/profile', userController.getProfile);
 
     this.get('#/contact', homeController.getContact);
-    this.get('#/games', homeController.getGames);
-
+    
+    this.get('#/games', gamesController.getGames);
+    this.get('#/games/snake', gamesController.getSnake);
 
 });
 
