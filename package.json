@@ -13,8 +13,11 @@
     "license": "ISC",
     "dependencies": {
         "express": "^4.17.1",
-        "handlebars": "^4.1.2",
+        "handlebars": "^4.7.3",
         "jquery": "^3.4.1",
         "sammy": "^0.7.6"
+    },
+    "devDependencies": {
+        "https-server": "^0.1.2"
     }
 }
