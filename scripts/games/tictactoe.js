@@ -1,6 +1,5 @@
 const svg = document.querySelector("svg");
 svg.addEventListener("click", function (event) {
-    console.log("jivsam");
     if (newGame) {
         resetSvg();
         console.log("reset");
@@ -52,6 +51,9 @@ function checkForWinner() {
     ) {
         newGame = true;
         return true;
+    } else if(!table.some((box)=>box.getAttribute("fill")== "white")){
+        newGame = true;
+        return false; 
     }
 
     return false;
